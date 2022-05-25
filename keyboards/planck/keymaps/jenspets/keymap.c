@@ -12,8 +12,8 @@
 //#define L_NUM 8
 
 enum layers {
-    _QWERTY = 0,
-    _COLEMAK,
+    _COLEMAK = 0,
+    _QWERTY,
     _DVORAK,
     _LOWER,
     _RAISE,
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #endif
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    unsigned char color[3];
+    //unsigned char color[3];
   
     switch (get_highest_layer(state)) {
     case _NAV:
