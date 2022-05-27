@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | NAV        | NUM  | GUI  | Alt  |Lower | Space| BS   |Raise | Left | Down |  Up  |Right |
      * `-----------------------------------------------------------------------------------------'
      */
-    [_COLEMAK] = LAYOUT_ortho_4x12(KC_TAB, KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_RALT,
+    [_COLEMAK] = LAYOUT_ortho_4x12(KC_TAB, RALT_T(KC_Q), KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, RALT_T(KC_SCLN), KC_RALT,
 				   LCTL_T(KC_ESC), KC_A, KC_R, KC_S, KC_T, KC_G, KC_M, KC_N, KC_E, KC_I, KC_O, KC_QUOT,
-				   LSFT_T(KC_CAPS), KC_Z, KC_X, KC_C, KC_D, KC_V, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, KC_ENT,
+				   LSFT_T(KC_CAPS), LGUI_T(KC_Z), LALT_T(KC_X), LCTL_T(KC_C), LSFT_T(KC_D), KC_V, KC_K, LSFT_T(KC_H), RCTL_T(KC_COMM), LALT_T(KC_DOT), RGUI_T(KC_SLSH), KC_ENT,
 				   TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, MO(_LOWER), SH_T(KC_SPC), KC_BSPC, MO(_RAISE), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
     /* Qwerty
      * ,-----------------------------------------------------------------------------------------.
@@ -71,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | NAV        | NUM  | GUI  | Alt  |Lower | Space| BS   |Raise | Left | Down |  Up  |Right |
      * `-----------------------------------------------------------------------------------------'
      */
-    [_QWERTY] = LAYOUT_ortho_4x12(KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_RALT,
+    [_QWERTY] = LAYOUT_ortho_4x12(KC_TAB, RALT_T(KC_Q), KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, RALT_T(KC_P), KC_RALT,
 				  LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,
-				  LSFT_T(KC_CAPS), KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_ENT,
+				  LSFT_T(KC_CAPS), LGUI_T(KC_Z), LALT_T(KC_X), LCTL_T(KC_C), LSFT_T(KC_V), KC_B, KC_N, RSFT_T(KC_M), RCTL_T(KC_COMM), LALT_T(KC_DOT), RGUI_T(KC_SLSH), KC_ENT,
 				  TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, MO(_LOWER), SH_T(KC_SPC), KC_BSPC, MO(_RAISE), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
     /* Lower
      * ,--------------------------------------------------------------------------------------.
