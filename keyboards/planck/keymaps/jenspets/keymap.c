@@ -15,8 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* Rgblight ideas borrowed from https://gist.github.com/muppetjones/3dff33c414311feed57a479cee6b574f */
+
 #include QMK_KEYBOARD_H
 #include "muse.h"
+
+#ifdef RGBLIGHT_ENABLE
+static rgblight_config_t rgb_default;
+#endif
 
 #ifndef SWAP_HANDS_ENABLE
 #ifdef SH_T
@@ -161,23 +167,60 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			       KC_TRNS, KC_TRNS, KC_LGUI, KC_LALT, KC_NO, KC_SPC, KC_BSPC, KC_NO, KC_P0, KC_COMM, KC_PDOT, KC_PPLS)
 };
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    //unsigned char color[3];
 
-    uint8_t rgb = rgblight_get_hue();
-	
-    switch (get_highest_layer(state)) {
-    case _NAV:
-	rgblight_setrgb (0x00,  0x00, 0xFF);
+void keyboard_post_init_user(void){
+#ifdef RGBLIGHT_ENABLE
+    rgb_default.raw = eeconfig_read_rgblight();
+#endif
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+#ifdef RGBLIGHT_ENABLE
+    if (rgblight_is_enabled()){
+	uint8_t offset;
+	switch (get_highest_layer(state)){
+	case _RAISE:
+	    offset = 16;
+	    break;
+	case _LOWER:
+	    offset = -16;
+	    break;
+	case _ADJUST:
+	    offset = 32;
+	    break;
+	case _PLOVER:
+	    offset = 128;
+	    break;
+	case _NAV:
+	    offset = 64;
+	    break;
+	case _NUM:
+	    offset = -64;
+	    break;
+	default:
+	    offset = 0;
+	}
+	rgblight_sethsv_noeeprom((rgb_default.hue + offset) % 255, rgb_default.sat, rgb_default.val);
+    }
+#endif
+    return state;
+}
+
+void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode){
+#ifdef RGBLIGHT_ENABLE
+    case RGB_HUD:
+    case RGB_HUI:
+    case RGB_SAD:
+    case RGB_SAI:
+    case RGB_VAD:
+    case RGB_VAI:
+	rgb_default.raw = eeconfig_read_rgblight();
 	break;
-    case _NUM:
-	rgblight_setrgb (0xFF,  0x00, 0x00);
-	break;
-    default: //  for any other layers, or the default layer
-	rgblight_setrgb (0x00,  0xFF, 0x00);
+#endif 
+    default:
 	break;
     }
-    return state;
 }
 
 /* #ifdef SWAP_HANDS_ENABLE */
