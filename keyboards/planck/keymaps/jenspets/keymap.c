@@ -180,13 +180,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 	uint8_t offset;
 	switch (get_highest_layer(state)){
 	case _RAISE:
-	    offset = 16;
+	    offset = 32;
 	    break;
 	case _LOWER:
-	    offset = -16;
+	    offset = -32;
 	    break;
 	case _ADJUST:
-	    offset = 32;
+	    /* No offset for adjust layer, as the hue is difficult to adjust with an offset applied */
+	    offset = 0;
 	    break;
 	case _PLOVER:
 	    offset = 128;
