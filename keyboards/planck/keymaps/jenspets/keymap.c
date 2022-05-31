@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_RAISE] = LAYOUT_ortho_4x12(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
 				 KC_DEL, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,
-				 KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, KC_MUTE,
+				 KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, TG(_NAV), TG(_NUM), KC_PGUP, KC_PGDN, KC_MUTE,
 				 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_ADJUST), KC_ENT, KC_DEL, KC_TRNS, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY),
     /* Plover
      * ,------------------------------------------------------------------------------------.
@@ -166,7 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NAV] = LAYOUT_ortho_4x12(KC_TAB, KC_NO, KC_WH_L, KC_MS_U, KC_WH_R, KC_WH_U, KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, KC_BTN5, KC_PSCR,
 			       LCTL_T(KC_ESC), KC_NO, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_RSFT,
 			       KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_INS, KC_HOME, KC_PGUP, KC_TRNS,
-			       KC_TRNS, KC_TRNS, KC_ACL1, KC_ACL2, KC_TRNS, KC_SPC, KC_TRNS, KC_TRNS, KC_DEL, KC_END, KC_PGDN, KC_NO),
+			       KC_TRNS, KC_TRNS, KC_ACL1, KC_ACL2, KC_TRNS, KC_SPC, KC_TRNS, TG(_NAV), KC_DEL, KC_END, KC_PGDN, KC_NO),
      /* Number
      * ,----------------------------------------------------------------------------------------.
      * |   XXXXX  | XXXXX |  Home |   Up  |  End  |  PgUp | NumLock | N_Ent | P7 | P8 | P9 | P/ |
@@ -181,7 +181,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUM] = LAYOUT_ortho_4x12(KC_NO, KC_NO, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_NLCK, KC_PENT, KC_P7, KC_P8, KC_P9, KC_PSLS,
 			       LCTL_T(KC_ESC), KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_NO, KC_TAB, KC_P4, KC_P5, KC_P6, KC_PAST,
 			       KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_DEL, KC_PEQL, KC_P1, KC_P2, KC_P3, KC_PMNS,
-			       KC_TRNS, KC_TRNS, KC_LGUI, KC_LALT, KC_NO, KC_SPC, KC_BSPC, KC_NO, KC_P0, KC_COMM, KC_PDOT, KC_PPLS)
+			       KC_TRNS, KC_TRNS, KC_LGUI, KC_LALT, KC_NO, KC_SPC, KC_BSPC, TG(_NUM), KC_P0, KC_COMM, KC_PDOT, KC_PPLS)
 };
 
 
