@@ -76,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				  LCTL_T(KC_ESC), LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G, KC_H, RSFT_T(KC_J), RCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_SCLN), KC_QUOT,
 				  LSFT_T(KC_CAPS), KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_ENT,
 				  TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, MO(_LOWER), SH_T(KC_SPC), KC_BSPC, MO(_RAISE), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
-    /* Lower (new)
+    /* Lower
      * ,----------------------------------------------------------------------------------------.
-     * |       |  `   |   @  |  {  |   }  |  ~   |  &   |   ^    |   |   |  \   |   %    |      |
+     * |       |  `   |   @  |  {  |   }  |  ~   |  ^   |   &    |   |   |  \   |   %    |      |
      * |-------+------+------+-----+------+------+------+--------+-------+------+--------+------|
      * |       | Esc  |   !  |  (  |   )  |  '   |  *   |   -    |   =   | NUHS | S-NUHS |      |
      * |-------+------+------+-----+------+------+------+--------+-------+------+--------+------|
@@ -87,26 +87,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | ----- | ---- | ---- | --- | ---- | ---- |      | Adjust |       |      |        |      |
      * `----------------------------------------------------------------------------------------'
      */
-    [_LOWER] = LAYOUT_ortho_4x12(KC_TRNS, KC_GRV, KC_AT, KC_LCBR, KC_RCBR, KC_TILD, KC_AMPR, KC_CIRC, KC_PIPE, KC_BSLS, KC_PERC, KC_TRNS,
-				  KC_TRNS,   KC_ESC, KC_EXLM, KC_LPRN, KC_RPRN, KC_QUOT, KC_ASTR, KC_MINS, KC_EQL, KC_NUHS, LSFT(KC_NUHS), KC_TRNS,
+    [_LOWER] = LAYOUT_ortho_4x12(KC_TRNS, KC_GRV, KC_AT, KC_LCBR, KC_RCBR, KC_TILD, KC_CIRC, KC_AMPR, KC_PIPE, KC_BSLS, KC_PERC, KC_TRNS,
+				  KC_TRNS, KC_ESC, KC_EXLM, KC_LPRN, KC_RPRN, KC_QUOT, KC_ASTR, KC_MINS, KC_EQL, KC_NUHS, LSFT(KC_NUHS), KC_TRNS,
 				  KC_TRNS, KC_CAPS, KC_DLR, KC_LBRC, KC_RBRC, LSFT(KC_QUOT), KC_HASH, KC_UNDS, KC_PLUS, KC_NUBS, LSFT(KC_NUBS), KC_TRNS,
 				  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_ADJUST), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-    /* Lower
-     * ,--------------------------------------------------------------------------------------.
-     * | ~     |   !  |   @  |  #  |   $  |   %  |   ^  |    &   |   *   |   (  |   )  |   BS |
-     * |-------+------+------+-----+------+------+------+--------+-------+------+------+------|
-     * | Del   |  F1  |  F2  |  F3 |  F4  |  F5  |  F6  |    _   |   +   |   {  |   }  |  |   |
-     * |-------+------+------+-----+------+------+------+--------+-------+------+------+------|
-     * | ----- |  F7  |  F8  | F9  | F10  | F11  | F12  | S-NUHS | S-NUBS| Home | End  | Mute |
-     * |-------+------+------+-----+------+------+------+----- --+-------+------+------+------|
-     * | ----- | ---- | ---- | --- | ---- | ---- | ---- | Adjust |  Next | VolD | VolU | Play |
-     * `--------------------------------------------------------------------------------------'
-     */
-    /* [_LOWER] = LAYOUT_ortho_4x12(KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-				 KC_DEL,	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
-				 KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, LSFT(KC_NUHS), LSFT(KC_NUBS), KC_HOME, KC_END, KC_MUTE,
-				 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_ADJUST), KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY),
-    */
     /* Raise
      * ,-------------------------------------------------------------------------------------.
      * | `     |   1  |   2  |  3  |   4  |   5  |   6  |    7   |   8  |   9  |   0  |   BS |
