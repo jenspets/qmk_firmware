@@ -2,3 +2,6 @@ SRC += muse.c
 
 SWAP_HANDS_ENABLE = yes
 # AUTO_SHIFT_ENABLE = yes
+CAPS_WORD_ENABLE = yes
+COMMAND_ENABLE = no
+
