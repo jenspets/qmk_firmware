@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				  TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, MO(_LOWER), SH_T(KC_SPC), KC_BSPC, MO(_RAISE), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
     /* Lower
      * ,----------------------------------------------------------------------------------------.
-     * |       |  `   |   @  |  {  |   }  |  ~   |  ^   |   &    |   |   |  \   |   %    |      |
+     * |       |  `   |   @  |  {  |   }  |  %   |  ^   |   &    |   |   |  \   |   ~    |      |
      * |-------+------+------+-----+------+------+------+--------+-------+------+--------+------|
      * |       | Esc  |   !  |  (  |   )  |  '   |  *   |   -    |   =   | NUHS | S-NUHS |      |
      * |-------+------+------+-----+------+------+------+--------+-------+------+--------+------|
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | ----- | ---- | ---- | --- | ---- | ---- |      | Adjust |       |      |        |      |
      * `----------------------------------------------------------------------------------------'
      */
-    [_LOWER] = LAYOUT_ortho_4x12(KC_TRNS, KC_GRV, KC_AT, KC_LCBR, KC_RCBR, KC_TILD, KC_CIRC, KC_AMPR, KC_PIPE, KC_BSLS, KC_PERC, KC_TRNS,
+    [_LOWER] = LAYOUT_ortho_4x12(KC_TRNS, KC_GRV, KC_AT, KC_LCBR, KC_RCBR, KC_PERC, KC_CIRC, KC_AMPR, KC_PIPE, KC_BSLS, KC_TILD, KC_TRNS,
 				  KC_TRNS, KC_ESC, KC_EXLM, KC_LPRN, KC_RPRN, KC_QUOT, KC_ASTR, KC_MINS, KC_EQL, KC_NUHS, LSFT(KC_NUHS), KC_TRNS,
 				  KC_TRNS, KC_CAPS, KC_DLR, KC_LBRC, KC_RBRC, LSFT(KC_QUOT), KC_HASH, KC_UNDS, KC_PLUS, KC_NUBS, LSFT(KC_NUBS), KC_TRNS,
 				  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_ADJUST), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
