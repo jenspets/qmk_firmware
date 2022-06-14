@@ -41,6 +41,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 	rgblight_sethsv_noeeprom((rgb_default.hue + offset) % 255, rgb_default.sat, rgb_default.val);
     }
 #endif
+    
+    //state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);    
     return state;
 }
 
