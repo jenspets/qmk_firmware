@@ -26,9 +26,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 	    /* No offset for adjust layer, as the hue is difficult to adjust with an offset applied */
 	    offset = 0;
 	    break;
+#ifdef USE_PLOVER
 	case _PLOVER:
 	    offset = 128;
 	    break;
+#endif
 	case _NAV:
 	    offset = 64;
 	    break;

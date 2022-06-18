@@ -7,13 +7,36 @@
 #define SH_T(kc) kc
 #endif
 
+#ifndef AUDIO_ENABLE
+#undef MU_MOD
+#undef AU_ON
+#undef AU_OFF
+#undef MUV_DE
+#undef MUV_IN
+#undef MU_ON
+#undef MU_OFF
+#undef MI_ON
+#undef MI_OFF
+#define MU_MOD KC_NO
+#define AU_ON KC_NO
+#define AU_OFF KC_NO
+#define MUV_DE KC_NO
+#define MUV_IN KC_NO
+#define MU_ON KC_NO
+#define MU_OFF KC_NO
+#define MI_ON KC_NO
+#define MI_OFF KC_NO
+#endif
+
 enum layers {
     _COLEMAK = 0,
     _QWERTY,
-    _SYMBOL,
+    _SYMBOLS,
     _LOWER,
     _RAISE,
+#ifdef USE_PLOVER
     _PLOVER,
+#endif
     _ADJUST,
     _NAV,
     _NUM
@@ -49,7 +72,11 @@ enum layers {
 #define ADJ_R2_L RESET, DEBUG, RGB_TOG, RGB_MOD, RGB_HUI
 #define ADJ_R2_R RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD
 #define ADJ_R3_L KC_TRNS, MU_MOD, AU_ON, AU_OFF, LAG_NRM
+#ifdef USE_PLOVER
 #define ADJ_R3_R LAG_SWP, DF(_QWERTY), DF(_COLEMAK), KC_TRNS, TO(_PLOVER)
+#else
+#define ADJ_R3_R LAG_SWP, DF(_QWERTY), DF(_COLEMAK), KC_TRNS, KC_TRNS
+#endif
 #define ADJ_R4_L MUV_DE, MUV_IN, MU_ON, MU_OFF, MI_ON
 #define ADJ_R4_R MI_OFF, TERM_ON, TERM_OFF, KC_TRNS, KC_TRNS
 #define ADJ_T_L  KC_TRNS, KC_TRNS
