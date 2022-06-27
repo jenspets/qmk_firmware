@@ -46,7 +46,7 @@ enum layers {
 #define BASE_R2_R KC_J, KC_L, KC_U, KC_Y, RALT_T(KC_SCLN)
 #define BASE_R3_L LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G
 #define BASE_R3_R KC_M, RSFT_T(KC_N), RCTL_T(KC_E), LALT_T(KC_I), LGUI_T(KC_O)
-#define BASE_R4_L KC_Z, KC_X, KC_C, KC_D, KC_V
+#define BASE_R4_L LT(_NAV, KC_Z), KC_X, KC_C, KC_D, KC_V
 #define BASE_R4_R KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH
 #define BASE_T_L  LT(_LOWER, KC_TAB), SH_T(KC_SPC)
 #define BASE_T_R  KC_BSPC, LT(_RAISE, KC_ESC)
@@ -86,7 +86,7 @@ enum layers {
 #define NAV_R2_R KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, KC_BTN5
 #define NAV_R3_L KC_NO, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D
 #define NAV_R3_R KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
-#define NAV_R4_L KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO
+#define NAV_R4_L KC_TRNS, KC_LALT, KC_LCTL, KC_LSFT, KC_NO
 #define NAV_R4_R KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END
 #define NAV_T_L  KC_TRNS, KC_SPC
 #define NAV_T_R  KC_TRNS, TG(_NAV)

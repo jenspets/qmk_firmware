@@ -15,6 +15,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #ifdef RGBLIGHT_ENABLE
     if (rgblight_is_enabled()){
 	uint8_t offset;
+	uint8_t rgbbase = 0;
 	switch (get_highest_layer(state)){
 	case _RAISE:
 	    offset = 32;
@@ -29,6 +30,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #ifdef USE_PLOVER
 	case _PLOVER:
 	    offset = 128;
+	    rgbbase = 1;
 	    break;
 #endif
 	case _NAV:
@@ -38,7 +40,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 	    offset = -64;
 	    break;
 	default:
+	    rgbbase = 1;
 	    offset = 0;
+	}
+	if (rgbbase == 0){
+	    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+	} else {
+	    rgb_default.raw = eeconfig_read_rgblight();
+	    rgblight_mode_noeeprom(rgb_default.mode);
 	}
 	rgblight_sethsv_noeeprom((rgb_default.hue + offset) % 255, rgb_default.sat, rgb_default.val);
     }
