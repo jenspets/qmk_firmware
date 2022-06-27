@@ -44,3 +44,7 @@
 // #define TAPPING_FORCE_HOLD
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+#ifdef RGBLIGHT_ENABLE
+#    define RGBLIGHT_ANIMATIONS
+#endif
