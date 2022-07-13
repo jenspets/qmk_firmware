@@ -94,7 +94,7 @@ enum layers {
 #define NUM_R2_L KC_NO, KC_HOME, KC_UP, KC_END, KC_PGUP
 #define NUM_R2_R KC_NLCK, KC_P7, KC_P8, KC_P9, KC_PENT
 #define NUM_R3_L KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN
-#define NUM_R3_R KC_NO, KC_TAB, KC_P4, KC_P5, KC_P6, KC_TAB
+#define NUM_R3_R KC_NO, KC_P4, KC_P5, KC_P6, KC_TAB
 #define NUM_R4_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
 #define NUM_R4_R KC_P0, KC_P1, KC_P2, KC_P3, KC_DEL
 #define NUM_T_L  KC_NO, KC_SPC
