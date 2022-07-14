@@ -1,6 +1,7 @@
 #pragma once
 
 #define USE_PLOVER
+#define USE_WIDE_MOD
 
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PLANCK_SOUND)
