@@ -54,12 +54,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | NAV        | NUM  | GUI  | Alt  |Lower | Space| BS   |Raise | Left | Down |  Up  |Right |
      * `-----------------------------------------------------------------------------------------'
      */
-    [_QWERTY] = LAYOUT_ortho_4x12_wrap(RALT_T(KC_Q), KC_W, KC_E, KC_R, KC_T, KC_TAB, KC_RALT, KC_Y, KC_U, KC_I, KC_O, RALT_T(KC_P),
-				       LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G, LCTL_T(KC_ESC), KC_QUOT, KC_H, RSFT_T(KC_J), RCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_SCLN),
-				       KC_Z, KC_X, KC_C, KC_V, KC_B, LSFT_T(KC_CAPS), KC_ENT, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-				       TG(_NAV), KC_LEFT, KC_RGHT, BASE_T_L, KC_LGUI, KC_LALT, BASE_T_R, KC_DOWN, KC_UP, TG(_NUM)),
-    //TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, MO(_LOWER), SH_T(KC_SPC), KC_BSPC, MO(_RAISE), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
-    
+    [_QWERTY] = LAYOUT_ortho_4x12_wrap(QWR_R2_L, KC_TAB, KC_RALT, QWR_R2_R,
+					QWR_R3_L, LCTL_T(KC_ESC), KC_QUOT, QWR_R3_R, 
+					QWR_R4_L, LSFT_T(KC_CAPS), KC_ENT, QWR_R4_R,
+					TG(_NAV), KC_LEFT, KC_RGHT, QWR_T_L, KC_LGUI, KC_LALT, QWR_T_R, KC_DOWN, KC_UP, TG(_NUM)),
+
     /* Lower
      * ,----------------------------------------------------------------------------------------.
      * |       |  `   |   @  |  {  |   }  |  %   |  ^   |   &    |   |   |  \   |   ~    |      |
@@ -184,10 +183,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | NAV        | NUM  | GUI  | Alt  |Lower | Space| BS   |Raise | Left | Down |  Up  |Right |
      * `-----------------------------------------------------------------------------------------'
      */
-    [_QWERTY] = LAYOUT_ortho_4x12(KC_TAB, RALT_T(KC_Q), KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, RALT_T(KC_P), KC_RALT,
-				  LCTL_T(KC_ESC), LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G, KC_H, RSFT_T(KC_J), RCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_SCLN), KC_QUOT,
-				  LSFT_T(KC_CAPS), KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_ENT,
-				  TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, MO(_LOWER), SH_T(KC_SPC), KC_BSPC, MO(_RAISE), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+    [_QWERTY] = LAYOUT_ortho_4x12_wrap(KC_TAB, QWR_R2_L, QWR_R2_R, KC_RALT,
+				   LCTL_T(KC_ESC), QWR_R3_L, QWR_R3_R, KC_QUOT,
+				   LSFT_T(KC_CAPS), QWR_R4_L, QWR_R4_R, KC_ENT,
+				   TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, QWR_T_L, QWR_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+
     /* Lower
      * ,----------------------------------------------------------------------------------------.
      * |       |  `   |   @  |  {  |   }  |  %   |  ^   |   &    |   |   |  \   |   ~    |      |
