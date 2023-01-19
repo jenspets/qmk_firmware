@@ -5,6 +5,6 @@ RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 WPM_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 COMMAND_ENABLE = no
-MOUSEKEY_ENABLE = no # Need to optimize firmware size...
+MOUSEKEY_ENABLE = yes # Need to optimize firmware size...
 
 EXTRAFLAGS += -flto # Link time optimization, might decrease FW size

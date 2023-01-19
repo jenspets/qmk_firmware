@@ -18,7 +18,7 @@
 
 #ifdef RGBLIGHT_ENABLE
 //#    define RGBLIGHT_ANIMATIONS
-#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
+//#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
 #    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 #    define RGBLIGHT_HUE_STEP  8
 #    define RGBLIGHT_SAT_STEP  8
@@ -74,3 +74,6 @@
 // Link time optimization is incompatible with these
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+
+// For EEPROM handedness
+#define EE_HANDS
