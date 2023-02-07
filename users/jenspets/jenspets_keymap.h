@@ -33,7 +33,7 @@ enum layers {
     _QWERTY,
     _LOWER,
     _RAISE,
-    _AUDIO
+    _AUDIO,
 #ifdef USE_PLOVER
     _PLOVER,
 #endif
