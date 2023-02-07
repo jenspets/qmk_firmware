@@ -95,6 +95,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			   KC_DEL, RSE_R3_L, RSE_R3_L, KC_BSLS,
 			   KC_TRNS, RSE_R4_L,  RSE_R4_R, KC_MUTE,
 			   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RSE_T_L, RSE_T_R, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY),
+
+    [_AUDIO] = LAYOUT_wrap(KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE, KC_NONE,
+			   KC_NONE, AUD_R2_L, AUD_R2_R, KC_NONE,
+			   KC_NONE, AUD_R3_L, AUD_R3_R, KC_NONE,
+			   KC_NONE, AUD_R4_L, AUD_R4_R, KC_NONE,
+			   KC_NONE, KC_NONE, KC_NONE, KC_NONE, AUD_T_L, AUD_T_R, KC_NONE, KC_NONE, KC_NONE, KC_NONE),
+    
 #ifdef USE_PLOVER
     /* Plover
      * ,------------------------------------------------------------------------------------.
