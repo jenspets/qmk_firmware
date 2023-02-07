@@ -89,6 +89,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				 RSE_R3_L, KC_DEL, KC_BSLS, RSE_R3_R,
 				 RSE_R4_L, KC_TRNS, KC_MUTE, RSE_R4_R,
 				 KC_TRNS, KC_MNXT, KC_MPLY, RSE_T_L, KC_TRNS, KC_TRNS, RSE_T_R, KC_VOLD, KC_VOLU, KC_TRNS),
+    
+    [_AUDIO] = LAYOUT_ortho_4x12_wrap(AUD_R2_L, KC_TRNS, KC_TRNS, AUD_R2_R,
+				  AUD_R3_L, KC_TRNS, KC_TRNS, AUD_R3_R,
+				  AUD_R4_L, KC_TRNS, KC_TRNS, AUD_R4_R,
+				  KC_TRNS, KC_TRNS, KC_TRNS, AUD_T_L, KC_TRNS, KC_TRNS, AUD_T_R, KC_TRNS, KC_TRNS, KC_TRNS),
+
 #    ifdef USE_PLOVER
     /* Plover
      * ,------------------------------------------------------------------------------------.
@@ -218,6 +224,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				 KC_DEL, RSE_R3_L, RSE_R3_R, KC_BSLS,
 				 KC_TRNS, RSE_R4_L, RSE_R4_R, KC_MUTE,
 				 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RSE_T_L, RSE_T_R, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY),
+
+    [_AUDIO] = LAYOUT_ortho_4x12_wrap(KC_TRNS, AUD_R2_L, AUD_R2_R, KC_TRNS, 
+				  KC_TRNS, AUD_R3_L, AUD_R3_R, KC_TRNS, 
+				  KC_TRNS, AUD_R4_L, AUD_R4_R, KC_TRNS, 
+				  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, AUD_T_L, AUD_T_R, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+
 #    ifdef USE_PLOVER
     /* Plover
      * ,------------------------------------------------------------------------------------.

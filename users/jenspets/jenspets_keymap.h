@@ -33,6 +33,7 @@ enum layers {
     _QWERTY,
     _LOWER,
     _RAISE,
+    _AUDIO
 #ifdef USE_PLOVER
     _PLOVER,
 #endif
@@ -46,7 +47,7 @@ enum layers {
 #define BASE_R3_L LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G
 #define BASE_R3_R KC_M, RSFT_T(KC_N), RCTL_T(KC_E), LALT_T(KC_I), LGUI_T(KC_O)
 #define BASE_R4_L LT(_NAV, KC_Z), KC_X, KC_C, KC_D, KC_V
-#define BASE_R4_R KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH
+#define BASE_R4_R KC_K, KC_H, KC_COMM, KC_DOT, LT(_AUDIO, KC_SLSH)
 #define BASE_T_L  LT(_LOWER, KC_TAB), SH_T(KC_SPC)
 #define BASE_T_R  SH_T(KC_BSPC), LT(_RAISE, KC_ESC)
 
@@ -55,7 +56,7 @@ enum layers {
 #define QWR_R3_L LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G
 #define QWR_R3_R KC_H, RSFT_T(KC_J), RCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_SCLN)
 #define QWR_R4_L LT(_NAV, KC_Z), KC_X, KC_C, KC_V, KC_B
-#define QWR_R4_R KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH
+#define QWR_R4_R KC_N, KC_M, KC_COMM, KC_DOT, LT(_AUDIO, KC_SLSH)
 #define QWR_T_L  LT(_LOWER, KC_TAB), SH_T(KC_SPC)
 #define QWR_T_R  SH_T(KC_BSPC), LT(_RAISE, KC_ESC)
 
@@ -76,6 +77,15 @@ enum layers {
 #define RSE_R4_R KC_PSCR, TG(_NAV), TG(_NUM), KC_PGUP, KC_PGDN
 #define RSE_T_L  MO(_ADJUST), KC_ENT
 #define RSE_T_R  KC_TRNS, KC_TRNS
+
+#define AUD_R2_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define AUD_R2_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define AUD_R3_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define AUD_R3_R KC_NO, KC_MUTE, KC_VOLD, KC_VOLU, KC_NO
+#define AUD_R4_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define AUD_R4_R KC_NO, KC_MPLY, KC_MPRV, KC_MNXT, KC_TRNS
+#define AUD_T_L  KC_TRNS, KC_TRNS
+#define AUD_T_R  KC_TRNS, KC_TRNS
 
 #define ADJ_R2_L QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI
 #define ADJ_R2_R RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD
