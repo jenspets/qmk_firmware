@@ -42,19 +42,19 @@ enum layers {
     _NUM
 };
 
-#define BASE_R2_L RALT_T(KC_Q), KC_W, KC_F, KC_P, KC_B
-#define BASE_R2_R KC_J, KC_L, KC_U, KC_Y, RALT_T(KC_SCLN)
-#define BASE_R3_L LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G
-#define BASE_R3_R KC_M, RSFT_T(KC_N), RCTL_T(KC_E), LALT_T(KC_I), LGUI_T(KC_O)
+#define BASE_R2_L KC_Q, KC_W, KC_F, KC_P, KC_B
+#define BASE_R2_R KC_J, KC_L, KC_U, KC_Y, KC_SCLN
+#define BASE_R3_L LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), RALT_T(KC_G)
+#define BASE_R3_R RALT_T(KC_M), RSFT_T(KC_N), RCTL_T(KC_E), LALT_T(KC_I), LGUI_T(KC_O)
 #define BASE_R4_L LT(_NAV, KC_Z), KC_X, KC_C, KC_D, KC_V
 #define BASE_R4_R KC_K, KC_H, KC_COMM, KC_DOT, LT(_AUDIO, KC_SLSH)
 #define BASE_T_L  LT(_LOWER, KC_TAB), SH_T(KC_SPC)
 #define BASE_T_R  SH_T(KC_BSPC), LT(_RAISE, KC_ESC)
 
-#define QWR_R2_L RALT_T(KC_Q), KC_W, KC_E, KC_R, KC_T
-#define QWR_R2_R KC_Y, KC_U, KC_I, KC_O, RALT_T(KC_P)
-#define QWR_R3_L LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G
-#define QWR_R3_R KC_H, RSFT_T(KC_J), RCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_SCLN)
+#define QWR_R2_L KC_Q, KC_W, KC_E, KC_R, KC_T
+#define QWR_R2_R KC_Y, KC_U, KC_I, KC_O, KC_P
+#define QWR_R3_L LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), RALT_T(KC_G)
+#define QWR_R3_R RALT_T(KC_H), RSFT_T(KC_J), RCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_SCLN)
 #define QWR_R4_L LT(_NAV, KC_Z), KC_X, KC_C, KC_V, KC_B
 #define QWR_R4_R KC_N, KC_M, KC_COMM, KC_DOT, LT(_AUDIO, KC_SLSH)
 #define QWR_T_L  LT(_LOWER, KC_TAB), SH_T(KC_SPC)
