@@ -69,10 +69,10 @@ enum layers {
 #define LOW_T_L  KC_TRNS, KC_TRNS
 #define LOW_T_R  KC_DEL, MO(_ADJUST)
 
-#define RSE_R2_L KC_1, KC_2, KC_3, KC_4, KC_5
-#define RSE_R2_R KC_6, KC_7, KC_8, KC_9, KC_0
-#define RSE_R3_L KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
-#define RSE_R3_R KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
+#define RSE_R2_L KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define RSE_R2_R KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
+#define RSE_R3_L KC_9, KC_7, KC_3, KC_1, KC_5
+#define RSE_R3_R KC_4, KC_0, KC_2, KC_6, KC_8
 #define RSE_R4_L KC_F11, KC_F12, KC_INS, KC_HOME, KC_END
 #define RSE_R4_R KC_PSCR, TG(_NAV), TG(_NUM), KC_PGUP, KC_PGDN
 #define RSE_T_L  MO(_ADJUST), KC_ENT
