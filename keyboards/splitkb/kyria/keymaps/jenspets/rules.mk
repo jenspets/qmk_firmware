@@ -6,5 +6,5 @@ WPM_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 COMMAND_ENABLE = no
 MOUSEKEY_ENABLE = yes # Need to optimize firmware size...
-
+SEND_STRING_ENABLE = yes
 EXTRAFLAGS += -flto # Link time optimization, might decrease FW size

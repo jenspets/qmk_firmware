@@ -29,6 +29,10 @@
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
 // produces the key `tap` when tapped (i.e. pressed and released).
 
+enum custom_keycodes {
+    X_THE = SAFE_RANGE
+};
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -50,10 +54,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_COLEMAK] = LAYOUT_wrap(
-     KC_TAB  , BASE_R2_L,                                        BASE_R2_R, KC_BSPC,
-     CTL_ESC , BASE_R3_L,                                        BASE_R3_R , CTL_QUOT,
-     LSFT_T(KC_CAPS), BASE_R4_L, KC_LBRC,KC_CAPS,     KC_ENT  , KC_RBRC, BASE_R4_R, RSFT_T(KC_ENT),
-                                 KC_MPLY, KC_LGUI, BASE_T_L, KC_QUOT   ,   KC_DEL    ,BASE_T_R, KC_RGUI, KC_APP
+			     KC_TAB  , BASE_R2_L,                                        BASE_R2_R, RGUI(KC_W),
+			     X_THE, BASE_R3_L,                                        BASE_R3_R , RGUI(KC_L),
+			     LSFT_T(KC_CAPS), BASE_R4_L, KC_NUBS, KC_MINS,     KC_ENT  , KC_NUHS, BASE_R4_R, RGUI(KC_Z),
+                                 KC_MPLY, KC_J, BASE_T_L, KC_QUOT   ,   KC_DEL    ,BASE_T_R, KC_APP, KC_APP
     ),
 /*
  * Base Layer: QWERTY
@@ -71,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_QWERTY] = LAYOUT_wrap(
      KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC,
-     CTL_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN,CTL_QUOT,
+     CTL_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN, CTL_QUOT,
      LSFT_T(KC_CAPS) , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC,KC_CAPS,     KC_NO  , KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_RSFT,
                                 KC_MPLY , KC_LGUI, ALT_ENT, KC_SPC , KC_QUOT   ,     KC_DEL    , KC_SPC ,KC_RALT, KC_RGUI, KC_APP
     ),
@@ -272,3 +276,26 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     return false;
 }
 #endif
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record){
+    switch (keycode) {
+    case X_THE: {
+	if  (record->event.pressed) {
+	    uint16_t mods = get_mods();
+	    if (mods & MOD_MASK_SHIFT) {
+		uint16_t lsft = mods & MOD_BIT(KC_LSFT);
+		uint16_t rsft = mods & MOD_BIT(KC_RSFT);
+		unregister_code(KC_LSFT);
+		unregister_code(KC_RSFT);
+		SEND_STRING("The");
+		if (lsft) register_code(KC_LSFT);
+		if (rsft) register_code(KC_RSFT);
+	    } else {
+		SEND_STRING("the");
+	    }
+	}
+	break;
+    }
+    }
+    return true;
+}
