@@ -54,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_COLEMAK] = LAYOUT_wrap(
-			     KC_TAB  , BASE_R2_L,                                        BASE_R2_R, RGUI(KC_W),
-			     X_THE, BASE_R3_L,                                        BASE_R3_R , RGUI(KC_L),
-			     LSFT_T(KC_CAPS), BASE_R4_L, KC_NUBS, KC_MINS,     KC_ENT  , KC_NUHS, BASE_R4_R, RGUI(KC_Z),
+			     KC_TAB  , BASE_R2_L,                                        BASE_R2_R, RALT(KC_W),
+			     X_THE, BASE_R3_L,                                        BASE_R3_R , RALT(KC_L),
+			     LSFT_T(KC_CAPS), BASE_R4_L, KC_NUBS, KC_MINS,     KC_ENT  , KC_NUHS, BASE_R4_R, RALT(KC_Z),
                                  KC_MPLY, KC_J, BASE_T_L, KC_QUOT   ,   KC_DEL    ,BASE_T_R, KC_APP, KC_APP
     ),
 /*
@@ -281,7 +281,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
     switch (keycode) {
     case X_THE: {
 	if  (record->event.pressed) {
-	    uint16_t mods = get_mods();
+	    uint16_t mods = get_mods() & MOD_MASK_SHIFT;
 	    if (mods & MOD_MASK_SHIFT) {
 		uint16_t lsft = mods & MOD_BIT(KC_LSFT);
 		uint16_t rsft = mods & MOD_BIT(KC_RSFT);
