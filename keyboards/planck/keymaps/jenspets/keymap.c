@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------------------------------------'
      */
     [_GAME] = LAYOUT_ortho_4x12_wrap(GAME_R2_L, KC_TAB, KC_RALT, GAME_R2_R,
-					GAME_R3_L, LCTL_T(KC_ESC), KC_QUOT, GAME_R3_R, 
-					GAME_R4_L, LSFT_T(KC_CAPS), KC_ENT, GAME_R4_R,
-					TG(_NAV), KC_LEFT, KC_RGHT, GAME_T_L, KC_LGUI, KC_LALT, GAME_T_R, KC_DOWN, KC_UP, TG(_NUM)),
+				     GAME_R3_L, LCTL_T(KC_ESC), KC_QUOT, GAME_R3_R, 
+				     GAME_R4_L, LSFT_T(KC_CAPS), KC_ENT, GAME_R4_R,
+				     TG(_NAV), KC_LEFT, KC_RGHT, GAME_T_L, KC_LGUI, KC_LALT, GAME_T_R, KC_DOWN, KC_UP, TG(_NUM)),
 
     /* Game2
      * ,-----------------------------------------------------------------------------------------.
