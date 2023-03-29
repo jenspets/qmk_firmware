@@ -30,16 +30,18 @@
 
 enum layers {
     _COLEMAK = 0,
+    _GAME,
+    _GAME2,
     _QWERTY,
-    _LOWER,
-    _RAISE,
-    _AUDIO,
 #ifdef USE_PLOVER
     _PLOVER,
 #endif
+    _LOWER,
+    _RAISE,
+    _AUDIO,
     _ADJUST,
     _NAV,
-    _NUM
+    _NUM,
 };
 
 #define BASE_R2_L KC_Q, KC_W, KC_F, KC_P, KC_B
@@ -117,3 +119,21 @@ enum layers {
 #define NUM_R4_R KC_P0, KC_P1, KC_P2, KC_P3, KC_DEL
 #define NUM_T_L  KC_NO, KC_SPC
 #define NUM_T_R  KC_BSPC, TG(_NUM)
+
+#define GAME_R2_L KC_TAB, KC_Q, KC_W, KC_E, KC_R
+#define GAME_R2_R KC_NO, KC_NO, KC_UP, KC_NO, KC_BSPC
+#define GAME_R3_L KC_LCTR, KC_A, KC_S, KC_D, KC_F
+#define GAME_R3_R KC_NO, KC_LEFT, KC_DOWN, KC_RIGHT, KC_P0
+#define GAME_R4_L KC_NO, KC_Z, KC_X, KC_C, KC_V
+#define GAME_R4_R KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT
+#define GAME_1_L  MO(_GAME2), KC_SPC
+#define GAME_T_R  KC_BSPC, KC_NO
+
+#define GAME2_R2_L KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define GAME2_R2_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define GAME2_R3_L KC_1, KC_2, KC_3, KC_4, KC_5
+#define GAME2_R3_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define GAME2_R4_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define GAME2_R4_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+#define GAME2_T_L  KC_TRNS, KC_NO
+#define GAME2_T_R  KC_NO, TG(_GAME) 
