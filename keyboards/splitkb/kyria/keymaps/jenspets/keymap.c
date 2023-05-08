@@ -57,8 +57,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			     KC_TAB  , BASE_R2_L,                                        BASE_R2_R, RALT(KC_W),
 			     X_THE, BASE_R3_L,                                        BASE_R3_R , RALT(KC_L),
 			     LSFT_T(KC_CAPS), BASE_R4_L, KC_NUBS, KC_MINS,     KC_ENT  , KC_NUHS, BASE_R4_R, RALT(KC_Z),
-                                 KC_MPLY, KC_J, BASE_T_L, KC_QUOT   ,   KC_DEL    ,BASE_T_R, KC_APP, KC_APP
-    ),
+                                 KC_MPLY, KC_J, BASE_T_L, KC_QUOT   ,   KC_DEL    ,BASE_T_R, KC_APP, KC_APP),
+
+    [_GAME] = LAYOUT_wrap(KC_TAB, GAME_R2_L,                                     GAME_R2_R, KC_BSPC,
+			  KC_CAPS, GAME_R3_L,                                    GAME_R3_R, KC_PIPE,
+			  KC_LSFT, GAME_R4_L, KC_NUBS, KC_MINS, KC_ENT, KC_NUHS, GAME_R4_R, KC_ENT,
+			  KC_MPLY, KC_ESC, GAME_T_L, KC_SPC,    KC_DEL, GAME_T_R, KC_ESC, KC_APP),
+
+    [_GAME2] = LAYOUT_wrap(KC_TAB, GAME2_R2_L,                                     GAME2_R2_R, KC_BSPC,
+			   KC_CAPS, GAME2_R3_L,                                    GAME2_R3_R, KC_PIPE,
+			   KC_LSFT, GAME2_R4_L, KC_NUBS, KC_MINS, KC_ENT, KC_NUHS, GAME2_R4_R, KC_ENT,
+			   KC_MPLY, KC_ESC, GAME2_T_L, KC_SPC,    KC_DEL, GAME2_T_R, KC_ESC, KC_APP),
 /*
  * Base Layer: QWERTY
  *
