@@ -40,6 +40,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			     LCTL_T(KC_ESC), BASE_R3_L, BASE_R3_R, KC_QUOT,
 			     LSFT_T(KC_CAPS), BASE_R4_L, BASE_R4_R, KC_ENT,
 			     TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, BASE_T_L, BASE_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+
+    [_GAME] = LAYOUT_wrap(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
+			  KC_TAB, GAME_R2_L, GAME_R2_R,  KC_RALT,
+			  KC_LCTL, GAME_R3_L, GAME_R3_R, KC_QUOT,
+			  KC_LSFT, GAME_R4_L, GAME_R4_R, KC_ENT,
+			  KC_CAPS, KC_NO, KC_LGUI, KC_LALT, GAME_T_L, GAME_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+    
+    [_GAME2] = LAYOUT_wrap(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
+			   KC_TAB, GAME2_R2_L, GAME2_R2_R,  KC_RALT,
+			   KC_LCTL, GAME2_R3_L, GAME2_R3_R, KC_QUOT,
+			   KC_LSFT, GAME2_R4_L, GAME2_R4_R, KC_ENT,
+			   KC_CAPS, KC_NO, KC_LGUI, KC_LALT, GAME2_T_L, GAME2_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
     /* Qwerty
      * ,------------------------------------------------------------------------------------------.
      * | Grave      |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | PrScr |
@@ -54,10 +66,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `------------------------------------------------------------------------------------------'
      */
     [_QWERTY] = LAYOUT_wrap(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_PSCR,
-			     KC_TAB, RALT_T(KC_Q), KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, RALT_T(KC_SCLN), KC_RALT,
-			     LCTL_T(KC_ESC), LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G, KC_M, RSFT_T(KC_N), RCTL_T(KC_E), LALT_T(KC_I), LGUI_T(KC_O), KC_QUOT,
-			     LSFT_T(KC_CAPS), KC_Z, KC_X, KC_C, KC_D, KC_V, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, KC_ENT,
-			     TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, LT(_LOWER, KC_TAB), SH_T(KC_SPC), KC_BSPC, LT(_RAISE, KC_ESC), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+			     KC_TAB, QWR_R2_L, QWR_R2_R,  KC_RALT,
+			     LCTL_T(KC_ESC), QWR_R3_L, QWR_R3_R, KC_QUOT,
+			     LSFT_T(KC_CAPS), QWR_R4_L, QWR_R4_R, KC_ENT,
+			     TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, QWR_T_L, QWR_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+
+   
     /* Lower (new)
      * ,----------------------------------------------------------------------------------------.
      * |       |      |      |     |      |      |      |        |       |      |        |      |
