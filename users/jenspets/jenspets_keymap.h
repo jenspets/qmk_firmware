@@ -7,6 +7,14 @@
 #define SH_T(kc) kc
 #endif
 
+#ifndef NO_GAME
+#define TO_GAME TO(_GAME)
+#define TG_GAME TG(_GAME)
+#else
+#define TO_GAME KC_TRNS
+#define TG_GAME KC_TRNS
+#endif
+
 #ifndef AUDIO_ENABLE
 #undef MU_MOD
 #undef AU_ON
@@ -30,8 +38,10 @@
 
 enum layers {
     _COLEMAK = 0,
+#ifndef NO_GAME
     _GAME,
     _GAME2,
+#endif
     _QWERTY,
 #ifdef USE_PLOVER
     _PLOVER,
@@ -93,9 +103,9 @@ enum layers {
 #define ADJ_R2_R RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD
 #define ADJ_R3_L KC_TRNS, KC_NO, KC_NO, KC_NO, LAG_NRM
 #ifdef USE_PLOVER
-#define ADJ_R3_R LAG_SWP, DF(_QWERTY), DF(_COLEMAK), TO(_PLOVER), KC_TRNS
+#define ADJ_R3_R LAG_SWP, DF(_COLEMAK), TO_GAME, DF(_QWERTY), TO(_PLOVER)
 #else
-#define ADJ_R3_R LAG_SWP, DF(_QWERTY), DF(_COLEMAK), KC_TRNS, KC_TRNS
+#define ADJ_R3_R LAG_SWP, DF(_COLEMAK), TO_GAME, DF(_QWERTY), KC_TRNS
 #endif
 #define ADJ_R4_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
 #define ADJ_R4_R KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
@@ -136,4 +146,4 @@ enum layers {
 #define GAME2_R4_L KC_ESC, KC_NO, KC_NO, KC_NO, KC_NO
 #define GAME2_R4_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
 #define GAME2_T_L  KC_TRNS, KC_NO
-#define GAME2_T_R  KC_NO, TG(_GAME) 
+#define GAME2_T_R  KC_NO, TG_GAME
