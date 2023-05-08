@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				  AUD_R4_L, KC_TRNS, KC_TRNS, AUD_R4_R,
 				  KC_TRNS, KC_TRNS, KC_TRNS, AUD_T_L, KC_TRNS, KC_TRNS, AUD_T_R, KC_TRNS, KC_TRNS, KC_TRNS),
 
-#    ifdef USE_PLOVER
+#ifdef USE_PLOVER
     /* Plover
      * ,------------------------------------------------------------------------------------.
      * |  1    |   1  |   1  |  1  |   1  |   1  |   1  |   1   |   1  |   1  |  1   |   1  |
@@ -145,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				  KC_NO,        KC_Q,   KC_W, KC_E, KC_R,  KC_T,  KC_Y, KC_U, KC_I,  KC_O,    KC_P, KC_LBRC,
 				  KC_NO,        KC_A,   KC_S, KC_D, KC_F,  KC_G,  KC_H, KC_J, KC_K,  KC_L, KC_SCLN, KC_QUOT,
 				  TO(_COLEMAK), KC_NO, KC_NO, KC_C, KC_V, KC_NO, KC_NO, KC_N, KC_M, KC_NO,   KC_NO,   KC_NO),
-#    endif
+#endif
     /* Adjust
      * ,-------------------------------------------------------------------------------------------------------------.
      * | ---- | Reset | Debug | RGB_tog | RGB_mod | RGB_hui | RGB_hud | RGB_sai | RGB_vai | RGB_sad | RGB_vad | ---- |
