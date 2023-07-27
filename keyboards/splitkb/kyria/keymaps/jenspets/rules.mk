@@ -1,10 +1,10 @@
 OLED_ENABLE = yes
-OLED_DRIVER = SSD1306   # Enables the use of OLED displays
+OLED_DRIVER = SSD1306      # Enables the use of OLED displays
 ENCODER_ENABLE = yes       # Enables the use of one or more encoders
 RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
-WPM_ENABLE = yes
+WPM_ENABLE = no            # Too much space
 CAPS_WORD_ENABLE = yes
 COMMAND_ENABLE = no
-MOUSEKEY_ENABLE = yes # Need to optimize firmware size...
+MOUSEKEY_ENABLE = yes 
 SEND_STRING_ENABLE = yes
-EXTRAFLAGS += -flto # Link time optimization, might decrease FW size
+EXTRAFLAGS += -flto        # Link time optimization, might decrease FW size
