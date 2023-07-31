@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		   KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,   KC_7,   KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_INT3,   KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,    KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS,    KC_STOP, KC_AGIN,
 		   LT(_LOWER, KC_TAB),          BASE_R2_L, BASE_R2_R,                                              KC_LBRC, KC_RBRC,            KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,    KC_P7,   KC_P8,   KC_P9,   KC_PPLS,    KC_MENU, KC_UNDO,
 		   KC_CAPS,                     BASE_R3_L, BASE_R3_R,                                              LT(_RAISE, KC_QUOT), KC_NUHS, KC_ENT,                                    KC_P4,   KC_P5,   KC_P6,   KC_PCMM,    KC_SLCT, KC_COPY,
-		   LT(_NAV, KC_Z), KC_NUBS,   KC_X, KC_C, KC_D, KC_V, KC_BSPC, BASE_R4_R,                                              KC_INT1, KC_RSFT,              KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE,
+		   LT(_NAV, KC_Z), KC_NUBS,   KC_X, KC_C, RALT_T(KC_D), KC_V, KC_BSPC, BASE_R4_R,                                              KC_INT1, KC_RSFT,              KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE,
 		   LCTL_T(KC_ESC), KC_LGUI, LT(_LOWER, KC_TAB), KC_INT5, KC_LNG2,         KC_SPC,         KC_LNG1, KC_INT4, KC_INT2, LT(_RAISE, KC_ESC), KC_RGUI, KC_APP,  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_P0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT
     ),
     [_QWERTY] = LAYOUT_wrap(
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		   KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,   KC_7,   KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_INT3,   KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,    KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS,    KC_STOP, KC_AGIN,
 		   LT(_LOWER, KC_TAB),                      QWR_R2_L, QWR_R2_R,                                    KC_LBRC, KC_RBRC,            KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,    KC_P7,   KC_P8,   KC_P9,   KC_PPLS,    KC_MENU, KC_UNDO,
 		   KC_CAPS,                                 QWR_R3_L, QWR_R3_R,                                    LT(_RAISE, KC_QUOT), KC_NUHS, KC_ENT,                                    KC_P4,   KC_P5,   KC_P6,   KC_PCMM,    KC_SLCT, KC_COPY,
-		   LT(_NAV, KC_Z), KC_NUBS,   KC_X, KC_C, KC_D, KC_V, KC_BSPC, QWR_R4_R,                           KC_INT1, KC_RSFT,             KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE,
+		   LT(_NAV, KC_Z), KC_NUBS,   KC_X, KC_C, RALT_T(KC_V), KC_B, KC_BSPC, QWR_R4_R,                           KC_INT1, KC_RSFT,             KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE,
 		   LCTL_T(KC_ESC), KC_LGUI, LT(_LOWER, KC_TAB), KC_INT5, KC_LNG2,         KC_SPC,         KC_LNG1, KC_INT4, KC_INT2, LT(_RAISE, KC_ESC), KC_RGUI, KC_APP,  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_P0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT
     ),
     [_LOWER] = LAYOUT_wrap(
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		   _______,  _______,  _______,  _______,  _______, _______, _______,  _______,  _______, _______,  _______, _______, _______, _______, _______,     _______,_______,_______,    _______,_______,_______,_______,    _______,_______,
 		   _______,                                   RSE_R2_L, RSE_R2_R,                                  _______, _______,         _______,     _______,_______,_______,    _______,_______,_______,_______,    _______,_______,
 		   _______,                                   RSE_R3_L, RSE_R3_R,                                  _______,         _______, _______,                              _______,_______,_______,_______,    _______,_______,
-		   KC_F11,  _______, KC_F12, KC_INS, KC_HOME, KC_END,   _______, RSE_R4_R,                                                 _______, _______,            _______,           _______,_______,_______,_______,    _______,_______,
+		   KC_F11,  _______, KC_F12, KC_INS, KC_5, KC_END,   _______, RSE_R4_R,                                                 _______, _______,            _______,           _______,_______,_______,_______,    _______,_______,
 		   _______,  _______,  MO(_ADJUST),  _______,  _______,         KC_ENT,           _______, _______,  _______, _______, _______, _______, _______,     _______,_______,_______,    _______,       _______,_______,    _______,_______
     ),
     [_AUDIO] = LAYOUT_wrap(
