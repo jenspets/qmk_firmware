@@ -19,6 +19,19 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+## Keymap visualization
+
+  +--------+--------+--------+---------+----+-----+---------+--------+--------+---------+
+  |     Q    |    W     |     F    |     P     |  B  |   J  |     L     |     U    |     Y    |     ;     |
+  |----------+----------+----------+-----------+-----+------+-----------+----------+----------+-----------+
+  |  A / GUI | R / LALT | S / CTRL | T / SHIFT |  G  |   M  | N / SHIFT | E / CTRL | I / LALT |  O / GUI  |
+  |----------+----------+----------+-----------+-----+------+-----------+----------+----------+-----------+
+  |  Z / NAV |    X     |     C    | D / ALTGR |  V  |   K  | H / ALTGR |    ,     |     .    | / / AUDIO |
+  +--------+--------+--------+---------+----+-----+---------+--------+--------+---------+
+                                   | TAB / LWR | SPC | BSPC | ESC / RSE |
+                             +---------+----+-----+---------+
+							 
+ 
 ## Background 
 
 This is the common setup between keyboards for jenpets' keymaps. 
