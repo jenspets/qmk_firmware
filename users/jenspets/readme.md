@@ -111,3 +111,6 @@ This is from the file keyboards/planck/keymaps/jenspets/keymap.c:
 I use this as a base for keymaps on all the keyboards I use. The extra keys on the keyboards are used for convenience keys, e.g., enter, the letter "j", and so on. The reason for J on a convenience key, is that Norwegian has many words with the bigrams "hj" and "kj" that are very inconvenient to type in a Colemak-DH keymap. 
 
 The Hasu usb-usb converter has an ISO-layout, but the HHKB has an ANSI layout. This means that the macros for Row 4, left hand, has to be implemented manually instead of using the XXX_R4_L macro.
+
+## Lights
+The layers have different colours based on the base color defined. Each layer change will change the backlight's hue with a set amount from the base layer color. 
