@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-#include <jenspets_keymap.h>
+#include <jenspets.h>
 
 #ifdef RGBLIGHT_ENABLE
 static rgblight_config_t rgb_default;

@@ -21,7 +21,7 @@
 #include "muse.h"
 
 /* From users/jenspets/ */
-#include <jenspets_keymap.h>
+#include <jenspets.h>
 
 #define LAYOUT_ortho_4x12_wrap(...)  LAYOUT_ortho_4x12(__VA_ARGS__)
 

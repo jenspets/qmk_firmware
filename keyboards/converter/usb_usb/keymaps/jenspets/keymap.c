@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#include <jenspets_keymap.h>
+#include <jenspets.h>
 
 #define LAYOUT_wrap(...) LAYOUT_all(__VA_ARGS__)
 

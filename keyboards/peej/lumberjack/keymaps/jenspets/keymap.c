@@ -16,7 +16,7 @@
  */
 
 #include QMK_KEYBOARD_H
-#include <jenspets_keymap.h>
+#include <jenspets.h>
 
 #define LAYOUT_wrap(...)  LAYOUT_ortho_5x12(__VA_ARGS__)
 
