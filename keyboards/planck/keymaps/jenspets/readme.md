@@ -10,6 +10,8 @@ It uses 10 layers, which are documented in users/jenspets/readme.md.
 ## Convenience keys
 The convenience keys are typical keys that are often used, and nice to have available. They are the rest of the 14 keys on the keyboard. 
 
+The letter "J" is placed so it is reachable for the thumbs. There are many words with "kj" and "hj" bigrams in Norwegian, and these are inconvenient to type in a Colemak layout. 
+
 ## Wide layout
 The keymap uses by default a wide layout, that moves each half of the characters to each side and have the convenience keys in the middle two columns. This makes the hands have a better angle when writing. 
 

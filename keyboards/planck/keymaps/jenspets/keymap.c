@@ -36,13 +36,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+--------+--------+----------+--------+------------+-------+--------+---------+--------+--------+--------|
      * | NAV/Z  |    X   |    C   |  RALT/D  |    V   | Shift/Caps | Enter |    K   |  RALT/H |    ,   |    .   |  NUM// | 
      * |--------+--------+--------+----------+--------+------------+-------+--------+---------+--------+--------+--------|
-     * | NAV    |  Left  | Right  |  Lwr/Tab |  Space |   LGUI     |  LALT |   BS   | Rse/Esc |  Down  |   Up   |   NUM  |
+     * | NAV    |  Left  | Right  |  Lwr/Tab |  Space |   LGUI     |   J   |   BS   | Rse/Esc |  Down  |   Up   |   NUM  |
      * `-----------------------------------------------------------------------------------------------------------------'
      */
     [_COLEMAK] = LAYOUT_ortho_4x12_wrap(BASE_R2_L, KC_TAB, KC_RALT, BASE_R2_R,
 					BASE_R3_L, LCTL_T(KC_ESC), KC_QUOT, BASE_R3_R, 
 					BASE_R4_L, LSFT_T(KC_CAPS), KC_ENT, BASE_R4_R,
-					TG(_NAV), KC_LEFT, KC_RGHT, BASE_T_L, KC_LGUI, KC_LALT, BASE_T_R, KC_DOWN, KC_UP, TG(_NUM)),
+					TG(_NAV), KC_LEFT, KC_RGHT, BASE_T_L, KC_LGUI, KC_J, BASE_T_R, KC_DOWN, KC_UP, TG(_NUM)),
 
     /* Game
      * ,-------------------------------------------------------------------------------------.
@@ -217,14 +217,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------------+--------+--------+--------+----------+--------+---------+---------+--------+--------+--------+-------|
      * | Shift/Caps | NAV/Z  |    X   |    C   |  RALT/D  |    V   |    K    |  RALT/H |    ,   |    .   |  NUM// | Enter | 
      * |------------+--------+--------+--------+----------+--------+---------+---------+--------+--------+--------+-------|
-     * |     NAV    |   NUM  |  LGUI  |  LAlt  |  Lwr/Tab |  Space |    BS   | Rse/Esc |   Left  |  Down |   Up   | Right |
+     * |     NAV    |   NUM  |  LGUI  |    J   |  Lwr/Tab |  Space |    BS   | Rse/Esc |   Left  |  Down |   Up   | Right |
      * `------------------------------------------------------------------------------------------------------------------'
      */
  
     [_COLEMAK] = LAYOUT_ortho_4x12_wrap(KC_TAB, BASE_R2_L, BASE_R2_R, KC_RALT,
 				   LCTL_T(KC_ESC), BASE_R3_L, BASE_R3_R, KC_QUOT,
 				   LSFT_T(KC_CAPS), BASE_R4_L, BASE_R4_R, KC_ENT,
-				   TG(_NAV), TG(_NUM), KC_LGUI, KC_LALT, BASE_T_L, BASE_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
+				   TG(_NAV), TG(_NUM), KC_LGUI, KC_J, BASE_T_L, BASE_T_R, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
     /* Game
      * ,-------------------------------------------------------------------------------------.
      * | NO | Tab   |   Q  |   W   |   E   |   R   |  NO  |  NO  |  Up  |   NO  | BSPC | ESC |
