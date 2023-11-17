@@ -231,13 +231,22 @@ bool oled_task_user(void) {
 	    oled_write_P(PSTR("Lower\n"), false);
 	    break;
 	case _RAISE:
-	    oled_write_P(PSTR("Rse\n"), false);
+	    oled_write_P(PSTR("Raise\n"), false);
 	    break;
 	case _ADJUST:
 	    oled_write_P(PSTR("Adjust\n"), false);
 	    break;
 	case _NUM:
 	    oled_write_P(PSTR("Number\n"), false);
+	    break;
+	case _AUDIO:
+	    oled_write_P(PSTR("Audio\n"), false);
+	    break;
+	case _GAME:
+	    oled_write_P(PSTR("Game\n"), false);
+	    break;
+	case _GAME2:
+	    oled_write_P(PSTR("Game 2\n"), false);
 	    break;
 	default:
 	    oled_write_P(PSTR("Undefined\n"), false);
